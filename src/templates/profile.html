@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!--in jinja test function, there's no 'None', only 'none'-->
+    {% if email is not none %}
+        <h1> Hello {{ email }}</h1>
+        <div id="map" style="width:100%;height:600px">My Location</div>
+    {% else %}
+        <h1> Failed Login</h1>
+    {% endif %}
+
+{% endblock %}
